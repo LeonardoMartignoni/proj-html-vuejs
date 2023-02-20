@@ -1,0 +1,23 @@
+/* Generics */
+
+.dbg {
+  border: 2px dashed white;
+}
+
+:root {
+  --primary-color: #13be13;
+  --secondary-color: #060f19;
+  --text-color: #ffffff;
+  --contrast-color: #182028;
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.primary_text {
+  color: var(--primary-color);
+}
+
+/* Header */
