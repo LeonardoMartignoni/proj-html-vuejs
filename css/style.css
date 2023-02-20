@@ -82,3 +82,20 @@ body {
   background-image: url("../img/slider.jpg");
   height: 70vh;
 }
+
+/* New Movie Section */
+
+.section_texts {
+  box-shadow: inset 2px 0 var(--primary-color);
+  border-bottom: 1px solid;
+  border-color: var(--contrast-color);
+}
+
+.control_arrow {
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  color: var(--primary-color);
+  border: 1px solid var(--contrast-color);
+  background-color: transparent;
+}
