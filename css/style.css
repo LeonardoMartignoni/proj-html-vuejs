@@ -36,6 +36,10 @@ img {
   object-fit: cover;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /* Header */
 
 #moviestar_logo {
@@ -185,4 +189,15 @@ img {
 
 .coming_soon_texts {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* New Movie Second */
+
+.type_selector {
+  display: flex;
+}
+
+.movie_content img {
+  opacity: 50%;
+  height: 500px;
 }
