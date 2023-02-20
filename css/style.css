@@ -169,3 +169,20 @@ img {
 .movie_playlist_details .date {
   font-size: 0.9rem;
 }
+
+/* Coming Soon Movie */
+
+.coming_soon {
+  position: relative;
+  height: 70vh;
+}
+
+.coming_bg_image {
+  position: absolute;
+  z-index: -1;
+  opacity: 50%;
+}
+
+.coming_soon_texts {
+  background-color: rgba(0, 0, 0, 0.4);
+}
