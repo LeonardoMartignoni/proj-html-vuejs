@@ -20,6 +20,11 @@ body {
   color: var(--primary-color);
 }
 
+.btn_primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
 /* Header */
 
 .input-group {
@@ -49,11 +54,6 @@ body {
   border-radius: 0;
 }
 
-.btn.search {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-
 /* Navbar */
 
 .nav-link {
@@ -69,4 +69,11 @@ body {
   color: var(--text-color);
   font-size: 0.5rem;
   transform: translateX(-100%);
+}
+
+/* Jumbotron */
+
+.jumbotron {
+  background-image: url("../img/slider.jpg");
+  height: 70vh;
 }
