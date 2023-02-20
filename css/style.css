@@ -38,6 +38,10 @@ img {
 
 /* Header */
 
+#moviestar_logo {
+  width: 200px;
+}
+
 .input-group {
   width: auto;
 }
@@ -131,4 +135,37 @@ img {
 .movie_star {
   top: 5%;
   right: 0;
+}
+
+/* Movie Playlist */
+
+.view_video {
+  width: 75%;
+}
+
+.movie_playlist_list {
+  background-color: var(--contrast-color);
+}
+
+.movie_playlist_heading {
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+.movies_playlist {
+  overflow-y: auto;
+  height: 500px;
+  row-gap: 15px;
+}
+
+.movie_playlist_image {
+  width: 100px;
+  height: 100px;
+}
+
+.movie_playlist_details .views {
+  font-size: 0.8rem;
+}
+
+.movie_playlist_details .date {
+  font-size: 0.9rem;
 }
