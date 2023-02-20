@@ -25,6 +25,11 @@ body {
   color: var(--text-color);
 }
 
+.btn_primary:hover {
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+}
+
 /* Header */
 
 .input-group {
