@@ -197,7 +197,22 @@ ul {
   display: flex;
 }
 
-.movie_content img {
+.new_movie_second img {
   opacity: 50%;
   height: 500px;
+}
+
+/* Latest News */
+
+.latest_news .latest_news_left_side img {
+  opacity: 50%;
+}
+
+.latest_news .latest_news_left_side {
+  height: 100%;
+}
+
+.latest_news .latest_news_right_side img {
+  opacity: 50%;
+  height: 250px;
 }
