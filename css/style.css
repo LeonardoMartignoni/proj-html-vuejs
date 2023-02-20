@@ -53,3 +53,20 @@ body {
   background-color: var(--primary-color);
   color: var(--text-color);
 }
+
+/* Navbar */
+
+.nav-link {
+  color: white;
+}
+
+.fa-basket-shopping {
+  position: relative;
+}
+
+.basket_counter {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 0.5rem;
+  transform: translateX(-100%);
+}

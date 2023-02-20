@@ -24,12 +24,20 @@
 
 	<!-- Vue App -->
 	<script src="./js/app.js" defer></script>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+		crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 	<!-- HEADER -->
 	<header>
 		<div class="container">
+
+			<!-- UPPER HEADER -->
 			<div class="dbg upper_header d-flex justify-content-between py-2">
 				<div class="left_upper_header">
 					<i class="fa-regular fa-envelope"></i>
@@ -47,6 +55,8 @@
 					<span>Login</span>
 				</div>
 			</div>
+
+			<!-- BOTTOM HEADER -->
 			<div class="bottom_header d-flex justify-content-between align-items-center py-3 dbg">
 				<img src="./img/cropped-logo.png" alt="Moviestar Logo">
 				<div class="input-group">
@@ -55,9 +65,92 @@
 					<button class="btn search p-3" type="button" id="button-addon2">Search</button>
 				</div>
 			</div>
+
 		</div>
 	</header>
+
 	<!-- NAVBAR -->
+	<div class="container">
+		<nav class="navbar navbar-expand-sm navbar-dark dbg">
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Home
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Celebrity
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Movie
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Page
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Shop
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Blog
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="#">Contact Us</a>
+					</li>
+				</ul>
+
+				<i class="ms-auto fa-solid fa-basket-shopping">
+					<span class="position-absolute top-0 start-100 translate-middle p-1 rounded-circle basket_counter">0
+					</span>
+				</i>
+			</div>
+		</nav>
+	</div>
 	<!-- JUMBOTRON -->
 	<!-- SECTION NEW MOVIE -->
 	<!-- SECTION MOVIE PLAYLIST -->
