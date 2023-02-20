@@ -21,3 +21,35 @@ body {
 }
 
 /* Header */
+
+.input-group {
+  width: auto;
+}
+
+.form-control {
+  flex-grow: 0;
+  flex: 0 0 250px;
+  background-color: transparent;
+  border-width: 2px 0;
+  border-color: var(--contrast-color);
+  color: var(--text-color);
+}
+
+.form-control:focus {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-width: 2px 0;
+  border-color: var(--contrast-color);
+  color: var(--text-color);
+}
+
+.form-control,
+.btn.search {
+  border-radius: 0;
+}
+
+.btn.search {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
