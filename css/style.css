@@ -93,6 +93,10 @@ a:hover {
   color: white;
 }
 
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
 .fa-basket-shopping {
   position: relative;
 }
@@ -138,6 +142,7 @@ a:hover {
 }
 
 .movie_image_text {
+  z-index: 1;
   bottom: 10%;
 }
 
@@ -214,6 +219,48 @@ a:hover {
 .new_movie_second img {
   opacity: 50%;
   height: 500px;
+}
+
+.new_movie_second .movie_content_overlay {
+  opacity: 0;
+  background: linear-gradient(rgba(0, 255, 0, 0.4), transparent);
+  height: 100%;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in;
+}
+
+.new_movie_second .movie_content:hover .movie_content_overlay {
+  opacity: 1;
+}
+
+.movie_content_overlay .movie_duration {
+  top: 20px;
+  background-color: #13be13;
+  font-size: 0.9rem;
+}
+
+.movie_content_overlay .fa-circle-play {
+  top: 30%;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.new_movie_second .movie_image_text {
+  bottom: 0;
+  transition: all 0.2s ease-in;
+}
+
+.new_movie_second .movie_release_genre {
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.new_movie_second .movie_content:hover .movie_image_text {
+  bottom: 10%;
+}
+
+.new_movie_second .movie_content:hover .movie_release_genre {
+  opacity: 1;
 }
 
 /* Latest News */
