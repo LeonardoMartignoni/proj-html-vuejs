@@ -1,9 +1,5 @@
 /* Generics */
 
-.dbg {
-  border: 2px dashed white;
-}
-
 :root {
   --primary-color: #13be13;
   --secondary-color: #060f19;
@@ -50,6 +46,26 @@ a:hover {
 }
 
 /* Header */
+
+.left_upper_header .fa-facebook-f {
+  color: #3c5997;
+}
+
+.left_upper_header .fa-twitter {
+  color: #04abee;
+}
+
+.left_upper_header .fa-linkedin-in {
+  color: #0f70a0;
+}
+
+.left_upper_header .fa-instagram {
+  color: #982128;
+}
+
+.left_upper_header .fa-google-plus-g {
+  color: #c54235;
+}
 
 #moviestar_logo {
   width: 200px;
