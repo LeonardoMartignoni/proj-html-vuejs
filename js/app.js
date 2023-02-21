@@ -111,6 +111,48 @@ createApp({
           sublink: [],
         },
       ],
+
+      footerCategoryLink: [
+        {
+          linkName: "English New Movie",
+        },
+        {
+          linkName: "Hindi All Movie",
+        },
+        {
+          linkName: "Latest Tamil Movie",
+        },
+        {
+          linkName: "New Top Rating Movie",
+        },
+        {
+          linkName: "Hornn New Movie",
+        },
+        {
+          linkName: "Animation New Movie",
+        },
+      ],
+
+      footerInformationLink: [
+        {
+          linkName: "Youtube Video Post",
+        },
+        {
+          linkName: "Actor Information",
+        },
+        {
+          linkName: "New Promotion",
+        },
+        {
+          linkName: "Latest Movie In English",
+        },
+        {
+          linkName: "Latest Film Product",
+        },
+        {
+          linkName: "Youtube New Video",
+        },
+      ],
     };
   },
 

@@ -839,23 +839,8 @@
 							<h4>Movie Category</h4>
 							<hr class="my-0">
 							<ul class="list-group">
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
-								</li>
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
-								</li>
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
-								</li>
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
-								</li>
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
-								</li>
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
+								<li class="mt-4" v-for="link in footerCategoryLink">
+									<a href="#">{{link.linkName}}</a>
 								</li>
 							</ul>
 						</div>
@@ -863,23 +848,8 @@
 							<h4>Information</h4>
 							<hr class="my-0">
 							<ul class="list-group">
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
-								</li>
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
-								</li>
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
-								</li>
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
-								</li>
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
-								</li>
-								<li class="mt-4">
-									<a href="#">Lorem, ipsum dolor.</a>
+								<li class="mt-4" v-for="link in footerInformationLink">
+									<a href="#">{{link.linkName}}</a>
 								</li>
 							</ul>
 						</div>
