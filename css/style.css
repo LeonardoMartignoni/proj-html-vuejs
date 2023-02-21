@@ -40,6 +40,15 @@ ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
 /* Header */
 
 #moviestar_logo {
@@ -252,4 +261,49 @@ ul {
   background-color: var(--contrast-color);
   color: var(--text-color);
   border: none;
+}
+
+/* Upper Footer */
+
+.upper_footer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/ft-bg.jpg");
+}
+
+.upper_footer hr {
+  width: 15%;
+  border: 1px solid white;
+  opacity: 1;
+}
+
+.upper_footer i {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.upper_footer .fa-facebook-f {
+  background-color: #05afe8;
+}
+
+.upper_footer .fa-twitter {
+  background-color: #05afe8;
+}
+
+.upper_footer .fa-linkedin-in {
+  background-color: #00a097;
+}
+
+.upper_footer .fa-instagram {
+  background-color: #c22d29;
+}
+
+.upper_footer .fa-pinterest {
+  background-color: #af0b1b;
+}
+
+.post_card_image {
+  width: 100px;
+  height: 100px;
 }
