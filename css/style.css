@@ -328,6 +328,7 @@ a:hover {
   height: 40px;
   text-align: center;
   line-height: 40px;
+  transition: all 0.1s ease-in;
 }
 
 .upper_footer .fa-facebook-f {
@@ -348,6 +349,11 @@ a:hover {
 
 .upper_footer .fa-pinterest {
   background-color: #af0b1b;
+}
+
+.upper_footer .socials i:hover {
+  background-color: transparent;
+  color: var(--primary-color);
 }
 
 .post_card_image {
