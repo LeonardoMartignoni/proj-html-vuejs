@@ -115,42 +115,54 @@ createApp({
       footerCategoryLink: [
         {
           linkName: "English New Movie",
+          linkHref: "#1",
         },
         {
           linkName: "Hindi All Movie",
+          linkHref: "#2",
         },
         {
           linkName: "Latest Tamil Movie",
+          linkHref: "#3",
         },
         {
           linkName: "New Top Rating Movie",
+          linkHref: "#4",
         },
         {
           linkName: "Hornn New Movie",
+          linkHref: "#5",
         },
         {
           linkName: "Animation New Movie",
+          linkHref: "#6",
         },
       ],
 
       footerInformationLink: [
         {
           linkName: "Youtube Video Post",
+          linkHref: "#1",
         },
         {
           linkName: "Actor Information",
+          linkHref: "#2",
         },
         {
           linkName: "New Promotion",
+          linkHref: "#3",
         },
         {
           linkName: "Latest Movie In English",
+          linkHref: "#4",
         },
         {
           linkName: "Latest Film Product",
+          linkHref: "#5",
         },
         {
           linkName: "Youtube New Video",
+          linkHref: "#6",
         },
       ],
     };

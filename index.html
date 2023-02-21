@@ -840,7 +840,7 @@
 							<hr class="my-0">
 							<ul class="list-group">
 								<li class="mt-4" v-for="link in footerCategoryLink">
-									<a href="#">{{link.linkName}}</a>
+									<a :href="link.linkHref">{{link.linkName}}</a>
 								</li>
 							</ul>
 						</div>
@@ -849,7 +849,7 @@
 							<hr class="my-0">
 							<ul class="list-group">
 								<li class="mt-4" v-for="link in footerInformationLink">
-									<a href="#">{{link.linkName}}</a>
+									<a :href="link.linkHref">{{link.linkName}}</a>
 								</li>
 							</ul>
 						</div>
