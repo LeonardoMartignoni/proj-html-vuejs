@@ -221,7 +221,7 @@ a:hover {
   height: 500px;
 }
 
-.new_movie_second .movie_content_overlay {
+.movie_content_overlay {
   opacity: 0;
   background: linear-gradient(rgba(0, 255, 0, 0.4), transparent);
   height: 100%;
@@ -229,7 +229,7 @@ a:hover {
   transition: opacity 0.1s ease-in;
 }
 
-.new_movie_second .movie_content:hover .movie_content_overlay {
+.movie_content:hover .movie_content_overlay {
   opacity: 1;
 }
 
