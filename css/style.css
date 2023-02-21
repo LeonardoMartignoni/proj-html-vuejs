@@ -108,6 +108,20 @@ a:hover {
   transform: translateX(-100%);
 }
 
+.dropdown-menu {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.dropdown-item {
+  color: var(--text-color);
+}
+
+.dropdown-item:hover {
+  background-color: inherit;
+  color: var(--primary-color);
+}
+
 /* Jumbotron */
 
 .jumbotron {
