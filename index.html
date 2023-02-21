@@ -84,12 +84,14 @@
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 						<li class="nav-item" v-for="link in navLink" :class="hasSublinks(link) ? 'dropdown' : ''">
-							<a class="nav-link" href="#" role="button" :data-bs-toggle="hasSublinks(link) ? 'dropdown' : ''"
-								aria-expanded="false" :class="hasSublinks(link) ? 'dropdown-toggle' : ''">
+							<a class="nav-link" :href="link.linkHref ? link.linkHref : ''" role="button"
+								:data-bs-toggle="hasSublinks(link) ? 'dropdown' : ''" aria-expanded="false"
+								:class="hasSublinks(link) ? 'dropdown-toggle' : ''">
 								{{link.linkName}}
 							</a>
 							<ul class="dropdown-menu" v-if="link.sublink">
-								<li v-for="sublink in link.sublink"><a class="dropdown-item" href="#">{{sublink.sub}}</a></li>
+								<li v-for="sublink in link.sublink"><a class="dropdown-item" :href="sublink.subHref">{{sublink.sub}}</a>
+								</li>
 							</ul>
 						</li>
 					</ul>

@@ -6,108 +6,139 @@ createApp({
       navLink: [
         {
           linkName: "Home",
+          linkHref: "",
           sublink: [
             {
               sub: "Home 1",
+              subHref: "#1",
             },
             {
               sub: "Home 2",
+              subHref: "#2",
             },
             {
               sub: "Home 3",
+              subHref: "#3",
             },
             {
               sub: "Home 4",
+              subHref: "#4",
             },
           ],
         },
         {
           linkName: "Celebrity",
+          linkHref: "",
           sublink: [
             {
               sub: "Celebrity 1",
+              subHref: "#1",
             },
             {
               sub: "Celebrity 2",
+              subHref: "#2",
             },
             {
               sub: "Celebrity 3",
+              subHref: "#3",
             },
             {
               sub: "Celebrity 4",
+              subHref: "#4",
             },
           ],
         },
         {
           linkName: "Movie",
+          linkHref: "",
           sublink: [
             {
               sub: "Movie 1",
+              subHref: "#1",
             },
             {
               sub: "Movie 2",
+              subHref: "#2",
             },
             {
               sub: "Movie 3",
+              subHref: "#3",
             },
             {
               sub: "Movie 4",
+              subHref: "#4",
             },
           ],
         },
         {
           linkName: "Page",
+          linkHref: "",
           sublink: [
             {
               sub: "Page 1",
+              subHref: "#1",
             },
             {
               sub: "Page 2",
+              subHref: "#2",
             },
             {
               sub: "Page 3",
+              subHref: "#3",
             },
             {
               sub: "Page 4",
+              subHref: "#4",
             },
           ],
         },
         {
           linkName: "Shop",
+          linkHref: "",
           sublink: [
             {
               sub: "Shop 1",
+              subHref: "#1",
             },
             {
               sub: "Shop 2",
+              subHref: "#2",
             },
             {
               sub: "Shop 3",
+              subHref: "#3",
             },
             {
               sub: "Shop 4",
+              subHref: "#4",
             },
           ],
         },
         {
           linkName: "Blog",
+          linkHref: "",
           sublink: [
             {
               sub: "Blog 1",
+              subHref: "#1",
             },
             {
               sub: "Blog 2",
+              subHref: "#2",
             },
             {
               sub: "Blog 3",
+              subHref: "#3",
             },
             {
               sub: "Blog 4",
+              subHref: "#4",
             },
           ],
         },
         {
           linkName: "Contact Us",
+          linkHref: "#contact",
           sublink: [],
         },
       ],
