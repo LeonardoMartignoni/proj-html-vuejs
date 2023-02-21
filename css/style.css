@@ -5,6 +5,14 @@
   --secondary-color: #060f19;
   --text-color: #ffffff;
   --contrast-color: #182028;
+
+  /* SOCIAL COLORS */
+  --facebook-color: #3c5997;
+  --twitter-color: #04abee;
+  --linkedin-color: #0f70a0;
+  --instagram-color: #c22d29;
+  --google-plus-color: #c54235;
+  --pinterest-color: #af0b1b;
 }
 
 body {
@@ -47,25 +55,29 @@ a:hover {
 
 /* Header */
 
+/* Upper Header */
+
 .left_upper_header .fa-facebook-f {
-  color: #3c5997;
+  color: var(--facebook-color);
 }
 
 .left_upper_header .fa-twitter {
-  color: #04abee;
+  color: var(--twitter-color);
 }
 
 .left_upper_header .fa-linkedin-in {
-  color: #0f70a0;
+  color: var(--linkedin-color);
 }
 
 .left_upper_header .fa-instagram {
-  color: #982128;
+  color: var(--instagram-color);
 }
 
 .left_upper_header .fa-google-plus-g {
-  color: #c54235;
+  color: var(--google-plus-color);
 }
+
+/* Bottom Header */
 
 #moviestar_logo {
   width: 200px;
@@ -362,23 +374,23 @@ a:hover {
 }
 
 .upper_footer .fa-facebook-f {
-  background-color: #05afe8;
+  background-color: var(--facebook-color);
 }
 
 .upper_footer .fa-twitter {
-  background-color: #05afe8;
+  background-color: var(--twitter-color);
 }
 
 .upper_footer .fa-linkedin-in {
-  background-color: #00a097;
+  background-color: var(--linkedin-color);
 }
 
 .upper_footer .fa-instagram {
-  background-color: #c22d29;
+  background-color: var(--instagram-color);
 }
 
 .upper_footer .fa-pinterest {
-  background-color: #af0b1b;
+  background-color: var(--pinterest-color);
 }
 
 .upper_footer .socials i:hover {
