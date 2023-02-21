@@ -33,957 +33,906 @@
 </head>
 
 <body>
-	<!-- HEADER -->
-	<header>
+	<div id="app">
+		<!-- HEADER -->
+		<header>
+			<!-- UPPER HEADER -->
+			<div class="upper_header">
+				<div class="container d-flex justify-content-between py-2">
 
-		<!-- UPPER HEADER -->
-		<div class="upper_header">
-			<div class="container d-flex justify-content-between py-2">
+					<div class="left_upper_header">
+						<i class="fa-regular fa-envelope"></i>
+						<span>Superhit Top Movie <span class="primary_text fw-semibold">** King Star **</span></span>
+						<span class="ms-4 social-icons">
+							<i class="mx-1 fa-brands fa-facebook-f"></i>
+							<i class="mx-1 fa-brands fa-twitter"></i>
+							<i class="mx-1 fa-brands fa-linkedin-in"></i>
+							<i class="mx-1 fa-brands fa-instagram"></i>
+							<i class="mx-1 fa-brands fa-google-plus-g"></i>
+						</span>
+					</div>
+					<div class="right_upper_header">
+						<i class="fa-solid fa-lock me-1"></i>
+						<span>Login</span>
+					</div>
 
-				<div class="left_upper_header">
-					<i class="fa-regular fa-envelope"></i>
-					<span>Superhit Top Movie <span class="primary_text fw-semibold">** King Star **</span></span>
-					<span class="ms-4 social-icons">
-						<i class="mx-1 fa-brands fa-facebook-f"></i>
-						<i class="mx-1 fa-brands fa-twitter"></i>
-						<i class="mx-1 fa-brands fa-linkedin-in"></i>
-						<i class="mx-1 fa-brands fa-instagram"></i>
-						<i class="mx-1 fa-brands fa-google-plus-g"></i>
-					</span>
-				</div>
-				<div class="right_upper_header">
-					<i class="fa-solid fa-lock me-1"></i>
-					<span>Login</span>
-				</div>
-
-			</div>
-		</div>
-
-		<!-- BOTTOM HEADER -->
-		<div class="bottom_header">
-			<div class="container d-flex justify-content-between align-items-center py-3">
-				<img id="moviestar_logo" src="./img/cropped-logo.png" alt="Moviestar Logo">
-				<div class="input-group">
-					<input type="text" class="form-control py-3" placeholder="Search" aria-label="Search"
-						aria-describedby="button-addon2">
-					<button class="btn btn_primary p-3" type="button" id="button-addon2">Search</button>
 				</div>
 			</div>
+
+			<!-- BOTTOM HEADER -->
+			<div class="bottom_header">
+				<div class="container d-flex justify-content-between align-items-center py-3">
+					<img id="moviestar_logo" src="./img/cropped-logo.png" alt="Moviestar Logo">
+					<div class="input-group">
+						<input type="text" class="form-control py-3" placeholder="Search" aria-label="Search"
+							aria-describedby="button-addon2">
+						<button class="btn btn_primary p-3" type="button" id="button-addon2">Search</button>
+					</div>
+				</div>
+			</div>
+
+		</header>
+
+		<!-- NAVBAR -->
+		<div class="container">
+			<nav class="navbar navbar-expand-sm navbar-dark">
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item" v-for="link in navLink" :class="hasSublinks(link) ? 'dropdown' : ''">
+							<a class="nav-link" href="#" role="button" :data-bs-toggle="hasSublinks(link) ? 'dropdown' : ''"
+								aria-expanded="false" :class="hasSublinks(link) ? 'dropdown-toggle' : ''">
+								{{link.linkName}}
+							</a>
+							<ul class="dropdown-menu" v-if="link.sublink">
+								<li v-for="sublink in link.sublink"><a class="dropdown-item" href="#">{{sublink.sub}}</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<i class="ms-auto fa-solid fa-basket-shopping">
+						<span class="position-absolute top-0 start-100 translate-middle p-1 rounded-circle basket_counter">0
+						</span>
+					</i>
+				</div>
+			</nav>
 		</div>
 
-	</header>
+		<!-- JUMBOTRON -->
+		<section class="jumbotron d-flex justify-content-center align-items-center flex-column">
+			<span>Welcome To Our Movie Site</span>
+			<h1 class="text-uppercase fw-light py-1">Our Special <span class="primary_text">Movies</span></h1>
+			<p class="w-50 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quos, beatae assumenda
+				consequatur libero molestiae numquam, ut dolore vero dicta ducimus perferendis inventore a enim officia maiores
+				eaque reprehenderit rem.</p>
+			<button class="btn btn_primary rounded-pill">Read more</button>
+		</section>
 
-	<!-- NAVBAR -->
-	<div class="container">
-		<nav class="navbar navbar-expand-sm navbar-dark">
+		<!-- SECTION NEW MOVIE -->
+		<section class="new_movie py-5">
+			<div class="container">
+				<div class="section_header d-flex justify-content-between mb-5">
+					<div class="section_texts py-3 ps-4 flex-grow-1">
+						<span class="heading_text d-block fw-bold fs-5">New Movie</span>
+						<span class="heading_paragraph d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+							eius!</span>
+					</div>
+					<div class="controls d-flex align-items-center">
+						<button
+							class="control_arrow left_arrow d-flex align-items-center justify-content-center mx-2 p-3 rounded-circle">
+							<i class="fa-solid fa-chevron-left"></i>
+						</button>
+						<button
+							class="control_arrow right_arrow d-flex align-items-center justify-content-center p-3 rounded-circle">
+							<i class="fa-solid fa-chevron-right"></i>
+						</button>
+					</div>
+				</div>
 
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Home
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Celebrity
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Movie
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Page
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Shop
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Blog
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
-						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="#">Contact Us</a>
-					</li>
+				<div class="row row-cols-3 g-0 d-flex align-items-center">
+					<div class="col">
+						<div class="movie_content_side position-relative">
+
+							<!-- MOVIE BANNER IMAGE -->
+							<img class="movie_image_side rounded-5" src="./img/1.jpg" alt="Movie Banner">
+
+							<!-- MOVIE NAME AND CATEGORY -->
+							<div class="movie_image_text p-4 position-absolute my-4">
+								<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+								<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
+							</div>
+
+							<!-- MOVIE DETAILS AND VIEWS -->
+							<div class="movie_info position-absolute d-flex justify-content-between w-100">
+								<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+								<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
+							</div>
+
+							<!-- MOVIE RATING STARS -->
+							<div class="movie_star position-absolute me-3">
+								<i class="fa-solid fa-star primary_text"></i>
+								<span>0/10</span>
+							</div>
+
+						</div>
+					</div>
+					<div class="col">
+						<div class="movie_content position-relative">
+
+							<!-- MOVIE BANNER IMAGE -->
+							<img class="movie_image rounded-5" src="./img/2.jpg" alt="Movie Banner">
+
+							<!-- MOVIE NAME AND CATEGORY -->
+							<div class="movie_image_text p-4 position-absolute my-4">
+								<span class="fw-bold fs-5 d-block mb-2">Quisque Auctor Movie In Strack</span>
+								<span class="fw-bold fs-5">Category: <span class="fw-normal">Coming Soon</span></span>
+							</div>
+
+							<!-- MOVIE DETAILS AND VIEWS -->
+							<div class="movie_info position-absolute d-flex justify-content-between w-100">
+								<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+								<span class="movie_views py-2 px-3 rounded-end rounded-pill">947 Views</span>
+							</div>
+
+							<!-- MOVIE RATING STARS -->
+							<div class="movie_star position-absolute me-3">
+								<i class="fa-solid fa-star primary_text"></i>
+								<span>4/10</span>
+							</div>
+
+						</div>
+					</div>
+					<div class="col">
+						<div class="movie_content_side position-relative my-4">
+
+							<!-- MOVIE BANNER IMAGE -->
+							<img class="movie_image_side rounded-5" src="./img/5.jpg" alt="Movie Banner">
+
+							<!-- MOVIE NAME AND CATEGORY -->
+							<div class="movie_image_text p-4 position-absolute my-4">
+								<span class="fw-bold fs-5 d-block mb-2">Quisque Auctor Movie In Strack</span>
+								<span class="fw-bold fs-5">Category: <span class="fw-normal">Latest Movie</span></span>
+							</div>
+
+							<!-- MOVIE DETAILS AND VIEWS -->
+							<div class="movie_info position-absolute d-flex justify-content-between w-100">
+								<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+								<span class="movie_views py-2 px-3 rounded-end rounded-pill">721 Views</span>
+							</div>
+
+							<!-- MOVIE RATING STARS -->
+							<div class="movie_star position-absolute me-3">
+								<i class="fa-solid fa-star primary_text"></i>
+								<span>0/10</span>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION MOVIE PLAYLIST -->
+		<section class="movie_playlist py-5">
+			<div class="container">
+				<div class="section_header d-flex justify-content-between mb-5">
+					<div class="section_texts py-3 ps-4 flex-grow-1">
+						<span class="heading_text d-block fw-bold fs-5">Movie Playlist</span>
+						<span class="heading_paragraph d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+							eius!</span>
+					</div>
+				</div>
+
+				<div class="view_frame d-flex">
+					<div class="view_video ratio ratio-16x9">
+						<iframe src="https://www.youtube.com/embed/BP0k4SdquG0"></iframe>
+					</div>
+
+					<div class="movie_playlist_list mx-4 flex-grow-1">
+						<div class="movie_playlist_heading p-3">
+							<span class="d-block fw-bold">New Movie</span>
+							<span>Playing 24</span>
+						</div>
+
+						<!-- PLAYLIST LIST -->
+						<div class="movies_playlist p-3 d-flex flex-column">
+							<div class="movie d-flex">
+
+								<div class="movie_playlist_image flex-shrink-0">
+									<img src="./img/2.jpg" alt="Movie image">
+								</div>
+
+								<div class="movie_playlist_details ps-2">
+									<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
+									<span class="fw-semibold views">947 views</span>
+									<span class="d-block date">February 12, 2016</span>
+								</div>
+							</div>
+							<div class="movie d-flex">
+
+								<div class="movie_playlist_image">
+									<img src="./img/5.jpg" alt="Movie image">
+								</div>
+
+								<div class="movie_playlist_details ps-2">
+									<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
+									<span class="fw-semibold views">947 views</span>
+									<span class="d-block date">February 12, 2016</span>
+								</div>
+							</div>
+							<div class="movie d-flex">
+
+								<div class="movie_playlist_image">
+									<img src="./img/3.jpg" alt="Movie image">
+								</div>
+
+								<div class="movie_playlist_details ps-2">
+									<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
+									<span class="fw-semibold views">947 views</span>
+									<span class="d-block date">February 12, 2016</span>
+								</div>
+							</div>
+							<div class="movie d-flex">
+
+								<div class="movie_playlist_image">
+									<img src="./img/3-1.jpg" alt="Movie image">
+								</div>
+
+								<div class="movie_playlist_details ps-2">
+									<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
+									<span class="fw-semibold views">947 views</span>
+									<span class="d-block date">February 12, 2016</span>
+								</div>
+							</div>
+							<div class="movie d-flex">
+
+								<div class="movie_playlist_image">
+									<img src="./img/4.jpg" alt="Movie image">
+								</div>
+
+								<div class="movie_playlist_details ps-2">
+									<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
+									<span class="fw-semibold views">947 views</span>
+									<span class="d-block date">February 12, 2016</span>
+								</div>
+							</div>
+							<div class="movie d-flex">
+
+								<div class="movie_playlist_image">
+									<img src="./img/2.jpg" alt="Movie image">
+								</div>
+
+								<div class="movie_playlist_details ps-2">
+									<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
+									<span class="fw-semibold views">947 views</span>
+									<span class="d-block date">February 12, 2016</span>
+								</div>
+							</div>
+							<div class="movie d-flex">
+
+								<div class="movie_playlist_image">
+									<img src="./img/5.jpg" alt="Movie image">
+								</div>
+
+								<div class="movie_playlist_details ps-2">
+									<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
+									<span class="fw-semibold views">947 views</span>
+									<span class="d-block date">February 12, 2016</span>
+								</div>
+							</div>
+							<div class="movie d-flex">
+
+								<div class="movie_playlist_image">
+									<img src="./img/3.jpg" alt="Movie image">
+								</div>
+
+								<div class="movie_playlist_details ps-2">
+									<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
+									<span class="fw-semibold views">947 views</span>
+									<span class="d-block date">February 12, 2016</span>
+								</div>
+							</div>
+							<div class="movie d-flex">
+
+								<div class="movie_playlist_image">
+									<img src="./img/3-1.jpg" alt="Movie image">
+								</div>
+
+								<div class="movie_playlist_details ps-2">
+									<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
+									<span class="fw-semibold views">947 views</span>
+									<span class="d-block date">February 12, 2016</span>
+								</div>
+							</div>
+							<div class="movie d-flex">
+
+								<div class="movie_playlist_image">
+									<img src="./img/4.jpg" alt="Movie image">
+								</div>
+
+								<div class="movie_playlist_details ps-2">
+									<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
+									<span class="fw-semibold views">947 views</span>
+									<span class="d-block date">February 12, 2016</span>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION COMING SOON MOVIE -->
+		<section class="coming_soon d-flex justify-content-center align-items-center flex-column my-5">
+
+			<img class="coming_bg_image" src="./img/coming-bg.jpg" alt="Background Image">
+
+			<span class="text-uppercase primary_text fw-bold">Coming Soon Movie</span>
+			<h1 class="text-uppercase fw-light py-1 display-3">MAX STILL</h1>
+
+			<div class="coming_soon_texts text-center py-2 px-4">
+				<span class="fw-bold text-uppercase d-block fs-5 mb-2">Jon Player <span class="primary_text">&</span> Emily
+					Rose</span>
+				<span class="fw-bold text-uppercase">The countdown is finished!</span>
+			</div>
+
+		</section>
+
+		<!-- SECTION NEW MOVIE 2 -->
+		<section class="new_movie_second py-5">
+			<div class="container">
+				<div class="section_header d-flex justify-content-between mb-5">
+					<div class="section_texts py-3 ps-4 flex-grow-1">
+						<span class="heading_text d-block fw-bold fs-5">New Movie</span>
+						<span class="heading_paragraph d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+							eius!</span>
+					</div>
+				</div>
+
+				<ul class="type_selector ps-0 my-5">
+					<li class="primary_text">All</li>
+					<li class="ms-5">Coming Soon</li>
+					<li class="ms-5">Latest Movie</li>
+					<li class="ms-5">Top Rating</li>
+					<li class="ms-5">TV Series</li>
 				</ul>
 
-				<i class="ms-auto fa-solid fa-basket-shopping">
-					<span class="position-absolute top-0 start-100 translate-middle p-1 rounded-circle basket_counter">0
-					</span>
-				</i>
-			</div>
-		</nav>
-	</div>
+				<div class="row g-5 ">
 
-	<!-- JUMBOTRON -->
-	<section class="jumbotron d-flex justify-content-center align-items-center flex-column">
-		<span>Welcome To Our Movie Site</span>
-		<h1 class="text-uppercase fw-light py-1">Our Special <span class="primary_text">Movies</span></h1>
-		<p class="w-50 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quos, beatae assumenda
-			consequatur libero molestiae numquam, ut dolore vero dicta ducimus perferendis inventore a enim officia maiores
-			eaque reprehenderit rem.</p>
-		<button class="btn btn_primary rounded-pill">Read more</button>
-	</section>
+					<div class="col-4">
+						<div class="movie_content position-relative">
 
-	<!-- SECTION NEW MOVIE -->
-	<section class="new_movie py-5">
-		<div class="container">
-			<div class="section_header d-flex justify-content-between mb-5">
-				<div class="section_texts py-3 ps-4 flex-grow-1">
-					<span class="heading_text d-block fw-bold fs-5">New Movie</span>
-					<span class="heading_paragraph d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-						eius!</span>
-				</div>
-				<div class="controls d-flex align-items-center">
-					<button
-						class="control_arrow left_arrow d-flex align-items-center justify-content-center mx-2 p-3 rounded-circle">
-						<i class="fa-solid fa-chevron-left"></i>
-					</button>
-					<button class="control_arrow right_arrow d-flex align-items-center justify-content-center p-3 rounded-circle">
-						<i class="fa-solid fa-chevron-right"></i>
-					</button>
-				</div>
-			</div>
+							<!-- MOVIE BANNER IMAGE -->
+							<img src="./img/1.jpg" alt="Movie Banner">
 
-			<div class="row row-cols-3 g-0 d-flex align-items-center">
-				<div class="col">
-					<div class="movie_content_side position-relative">
-
-						<!-- MOVIE BANNER IMAGE -->
-						<img class="movie_image_side rounded-5" src="./img/1.jpg" alt="Movie Banner">
-
-						<!-- MOVIE NAME AND CATEGORY -->
-						<div class="movie_image_text p-4 position-absolute my-4">
-							<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-							<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
-						</div>
-
-						<!-- MOVIE DETAILS AND VIEWS -->
-						<div class="movie_info position-absolute d-flex justify-content-between w-100">
-							<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-							<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
-						</div>
-
-						<!-- MOVIE RATING STARS -->
-						<div class="movie_star position-absolute me-3">
-							<i class="fa-solid fa-star primary_text"></i>
-							<span>0/10</span>
-						</div>
-
-					</div>
-				</div>
-				<div class="col">
-					<div class="movie_content position-relative">
-
-						<!-- MOVIE BANNER IMAGE -->
-						<img class="movie_image rounded-5" src="./img/2.jpg" alt="Movie Banner">
-
-						<!-- MOVIE NAME AND CATEGORY -->
-						<div class="movie_image_text p-4 position-absolute my-4">
-							<span class="fw-bold fs-5 d-block mb-2">Quisque Auctor Movie In Strack</span>
-							<span class="fw-bold fs-5">Category: <span class="fw-normal">Coming Soon</span></span>
-						</div>
-
-						<!-- MOVIE DETAILS AND VIEWS -->
-						<div class="movie_info position-absolute d-flex justify-content-between w-100">
-							<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-							<span class="movie_views py-2 px-3 rounded-end rounded-pill">947 Views</span>
-						</div>
-
-						<!-- MOVIE RATING STARS -->
-						<div class="movie_star position-absolute me-3">
-							<i class="fa-solid fa-star primary_text"></i>
-							<span>4/10</span>
-						</div>
-
-					</div>
-				</div>
-				<div class="col">
-					<div class="movie_content_side position-relative my-4">
-
-						<!-- MOVIE BANNER IMAGE -->
-						<img class="movie_image_side rounded-5" src="./img/5.jpg" alt="Movie Banner">
-
-						<!-- MOVIE NAME AND CATEGORY -->
-						<div class="movie_image_text p-4 position-absolute my-4">
-							<span class="fw-bold fs-5 d-block mb-2">Quisque Auctor Movie In Strack</span>
-							<span class="fw-bold fs-5">Category: <span class="fw-normal">Latest Movie</span></span>
-						</div>
-
-						<!-- MOVIE DETAILS AND VIEWS -->
-						<div class="movie_info position-absolute d-flex justify-content-between w-100">
-							<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-							<span class="movie_views py-2 px-3 rounded-end rounded-pill">721 Views</span>
-						</div>
-
-						<!-- MOVIE RATING STARS -->
-						<div class="movie_star position-absolute me-3">
-							<i class="fa-solid fa-star primary_text"></i>
-							<span>0/10</span>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- SECTION MOVIE PLAYLIST -->
-	<section class="movie_playlist py-5">
-		<div class="container">
-			<div class="section_header d-flex justify-content-between mb-5">
-				<div class="section_texts py-3 ps-4 flex-grow-1">
-					<span class="heading_text d-block fw-bold fs-5">Movie Playlist</span>
-					<span class="heading_paragraph d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-						eius!</span>
-				</div>
-			</div>
-
-			<div class="view_frame d-flex">
-				<div class="view_video ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/BP0k4SdquG0"></iframe>
-				</div>
-
-				<div class="movie_playlist_list mx-4 flex-grow-1">
-					<div class="movie_playlist_heading p-3">
-						<span class="d-block fw-bold">New Movie</span>
-						<span>Playing 24</span>
-					</div>
-
-					<!-- PLAYLIST LIST -->
-					<div class="movies_playlist p-3 d-flex flex-column">
-						<div class="movie d-flex">
-
-							<div class="movie_playlist_image flex-shrink-0">
-								<img src="./img/2.jpg" alt="Movie image">
+							<!-- MOVIE NAME AND CATEGORY -->
+							<div class="movie_image_text p-4 position-absolute my-4">
+								<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+								<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
+								<span class="movie_release_genre">
+									<span class="d-block mt-2
+									">Release: February 12, 2016</span>
+									<span>Genres: Drama, Action Release</span>
+								</span>
 							</div>
 
-							<div class="movie_playlist_details ps-2">
-								<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
-								<span class="fw-semibold views">947 views</span>
-								<span class="d-block date">February 12, 2016</span>
-							</div>
-						</div>
-						<div class="movie d-flex">
-
-							<div class="movie_playlist_image">
-								<img src="./img/5.jpg" alt="Movie image">
+							<!-- MOVIE DETAILS AND VIEWS -->
+							<div class="movie_info position-absolute d-flex justify-content-between w-100">
+								<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+								<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
 							</div>
 
-							<div class="movie_playlist_details ps-2">
-								<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
-								<span class="fw-semibold views">947 views</span>
-								<span class="d-block date">February 12, 2016</span>
-							</div>
-						</div>
-						<div class="movie d-flex">
-
-							<div class="movie_playlist_image">
-								<img src="./img/3.jpg" alt="Movie image">
+							<!-- MOVIE RATING STARS -->
+							<div class="movie_star position-absolute me-3">
+								<i class="fa-solid fa-star primary_text"></i>
+								<span>0/10</span>
 							</div>
 
-							<div class="movie_playlist_details ps-2">
-								<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
-								<span class="fw-semibold views">947 views</span>
-								<span class="d-block date">February 12, 2016</span>
-							</div>
-						</div>
-						<div class="movie d-flex">
-
-							<div class="movie_playlist_image">
-								<img src="./img/3-1.jpg" alt="Movie image">
-							</div>
-
-							<div class="movie_playlist_details ps-2">
-								<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
-								<span class="fw-semibold views">947 views</span>
-								<span class="d-block date">February 12, 2016</span>
-							</div>
-						</div>
-						<div class="movie d-flex">
-
-							<div class="movie_playlist_image">
-								<img src="./img/4.jpg" alt="Movie image">
-							</div>
-
-							<div class="movie_playlist_details ps-2">
-								<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
-								<span class="fw-semibold views">947 views</span>
-								<span class="d-block date">February 12, 2016</span>
-							</div>
-						</div>
-						<div class="movie d-flex">
-
-							<div class="movie_playlist_image">
-								<img src="./img/2.jpg" alt="Movie image">
-							</div>
-
-							<div class="movie_playlist_details ps-2">
-								<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
-								<span class="fw-semibold views">947 views</span>
-								<span class="d-block date">February 12, 2016</span>
-							</div>
-						</div>
-						<div class="movie d-flex">
-
-							<div class="movie_playlist_image">
-								<img src="./img/5.jpg" alt="Movie image">
-							</div>
-
-							<div class="movie_playlist_details ps-2">
-								<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
-								<span class="fw-semibold views">947 views</span>
-								<span class="d-block date">February 12, 2016</span>
-							</div>
-						</div>
-						<div class="movie d-flex">
-
-							<div class="movie_playlist_image">
-								<img src="./img/3.jpg" alt="Movie image">
-							</div>
-
-							<div class="movie_playlist_details ps-2">
-								<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
-								<span class="fw-semibold views">947 views</span>
-								<span class="d-block date">February 12, 2016</span>
-							</div>
-						</div>
-						<div class="movie d-flex">
-
-							<div class="movie_playlist_image">
-								<img src="./img/3-1.jpg" alt="Movie image">
-							</div>
-
-							<div class="movie_playlist_details ps-2">
-								<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
-								<span class="fw-semibold views">947 views</span>
-								<span class="d-block date">February 12, 2016</span>
-							</div>
-						</div>
-						<div class="movie d-flex">
-
-							<div class="movie_playlist_image">
-								<img src="./img/4.jpg" alt="Movie image">
-							</div>
-
-							<div class="movie_playlist_details ps-2">
-								<span class="fw-bold d-block">Quisque auctor Movie in Strack</span>
-								<span class="fw-semibold views">947 views</span>
-								<span class="d-block date">February 12, 2016</span>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- SECTION COMING SOON MOVIE -->
-	<section class="coming_soon d-flex justify-content-center align-items-center flex-column my-5">
-
-		<img class="coming_bg_image" src="./img/coming-bg.jpg" alt="Background Image">
-
-		<span class="text-uppercase primary_text fw-bold">Coming Soon Movie</span>
-		<h1 class="text-uppercase fw-light py-1 display-3">MAX STILL</h1>
-
-		<div class="coming_soon_texts text-center py-2 px-4">
-			<span class="fw-bold text-uppercase d-block fs-5 mb-2">Jon Player <span class="primary_text">&</span> Emily
-				Rose</span>
-			<span class="fw-bold text-uppercase">The countdown is finished!</span>
-		</div>
-
-	</section>
-
-	<!-- SECTION NEW MOVIE 2 -->
-	<section class="new_movie_second py-5">
-		<div class="container">
-			<div class="section_header d-flex justify-content-between mb-5">
-				<div class="section_texts py-3 ps-4 flex-grow-1">
-					<span class="heading_text d-block fw-bold fs-5">New Movie</span>
-					<span class="heading_paragraph d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-						eius!</span>
-				</div>
-			</div>
-
-			<ul class="type_selector ps-0 my-5">
-				<li class="primary_text">All</li>
-				<li class="ms-5">Coming Soon</li>
-				<li class="ms-5">Latest Movie</li>
-				<li class="ms-5">Top Rating</li>
-				<li class="ms-5">TV Series</li>
-			</ul>
-
-			<div class="row g-5 ">
-
-				<div class="col-4">
-					<div class="movie_content position-relative">
-
-						<!-- MOVIE BANNER IMAGE -->
-						<img src="./img/1.jpg" alt="Movie Banner">
-
-						<!-- MOVIE NAME AND CATEGORY -->
-						<div class="movie_image_text p-4 position-absolute my-4">
-							<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-							<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
-							<span class="movie_release_genre">
-								<span class="d-block mt-2
-								">Release: February 12, 2016</span>
-								<span>Genres: Drama, Action Release</span>
-							</span>
-						</div>
-
-						<!-- MOVIE DETAILS AND VIEWS -->
-						<div class="movie_info position-absolute d-flex justify-content-between w-100">
-							<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-							<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
-						</div>
-
-						<!-- MOVIE RATING STARS -->
-						<div class="movie_star position-absolute me-3">
-							<i class="fa-solid fa-star primary_text"></i>
-							<span>0/10</span>
-						</div>
-
-						<!-- MOVIE OVERLAY -->
-						<div class="movie_content_overlay position-absolute w-100 top-0">
-							<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
-							<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
-								<span>2.30.00</span>
+							<!-- MOVIE OVERLAY -->
+							<div class="movie_content_overlay position-absolute w-100 top-0">
+								<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
+								<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
+									<span>2.30.00</span>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-4">
-					<div class="movie_content position-relative">
+					<div class="col-4">
+						<div class="movie_content position-relative">
 
-						<!-- MOVIE BANNER IMAGE -->
-						<img src="./img/5-1.jpg" alt="Movie Banner">
+							<!-- MOVIE BANNER IMAGE -->
+							<img src="./img/5-1.jpg" alt="Movie Banner">
 
-						<!-- MOVIE NAME AND CATEGORY -->
-						<div class="movie_image_text p-4 position-absolute my-4">
-							<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-							<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
-							<span class="movie_release_genre">
-								<span class="d-block mt-2
-								">Release: February 12, 2016</span>
-								<span>Genres: Drama, Action Release</span>
-							</span>
-						</div>
+							<!-- MOVIE NAME AND CATEGORY -->
+							<div class="movie_image_text p-4 position-absolute my-4">
+								<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+								<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
+								<span class="movie_release_genre">
+									<span class="d-block mt-2
+									">Release: February 12, 2016</span>
+									<span>Genres: Drama, Action Release</span>
+								</span>
+							</div>
 
-						<!-- MOVIE DETAILS AND VIEWS -->
-						<div class="movie_info position-absolute d-flex justify-content-between w-100">
-							<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-							<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
-						</div>
+							<!-- MOVIE DETAILS AND VIEWS -->
+							<div class="movie_info position-absolute d-flex justify-content-between w-100">
+								<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+								<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
+							</div>
 
-						<!-- MOVIE RATING STARS -->
-						<div class="movie_star position-absolute me-3">
-							<i class="fa-solid fa-star primary_text"></i>
-							<span>0/10</span>
-						</div>
+							<!-- MOVIE RATING STARS -->
+							<div class="movie_star position-absolute me-3">
+								<i class="fa-solid fa-star primary_text"></i>
+								<span>0/10</span>
+							</div>
 
-						<!-- MOVIE OVERLAY -->
-						<div class="movie_content_overlay position-absolute w-100 top-0">
-							<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
-							<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
-								<span>2.30.00</span>
+							<!-- MOVIE OVERLAY -->
+							<div class="movie_content_overlay position-absolute w-100 top-0">
+								<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
+								<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
+									<span>2.30.00</span>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-4">
-					<div class="movie_content position-relative">
+					<div class="col-4">
+						<div class="movie_content position-relative">
 
-						<!-- MOVIE BANNER IMAGE -->
-						<img src="./img/3.jpg" alt="Movie Banner">
+							<!-- MOVIE BANNER IMAGE -->
+							<img src="./img/3.jpg" alt="Movie Banner">
 
-						<!-- MOVIE NAME AND CATEGORY -->
-						<div class="movie_image_text p-4 position-absolute my-4">
-							<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-							<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
-							<span class="movie_release_genre">
-								<span class="d-block mt-2
-								">Release: February 12, 2016</span>
-								<span>Genres: Drama, Action Release</span>
-							</span>
-						</div>
+							<!-- MOVIE NAME AND CATEGORY -->
+							<div class="movie_image_text p-4 position-absolute my-4">
+								<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+								<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
+								<span class="movie_release_genre">
+									<span class="d-block mt-2
+									">Release: February 12, 2016</span>
+									<span>Genres: Drama, Action Release</span>
+								</span>
+							</div>
 
-						<!-- MOVIE DETAILS AND VIEWS -->
-						<div class="movie_info position-absolute d-flex justify-content-between w-100">
-							<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-							<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
-						</div>
+							<!-- MOVIE DETAILS AND VIEWS -->
+							<div class="movie_info position-absolute d-flex justify-content-between w-100">
+								<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+								<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
+							</div>
 
-						<!-- MOVIE RATING STARS -->
-						<div class="movie_star position-absolute me-3">
-							<i class="fa-solid fa-star primary_text"></i>
-							<span>0/10</span>
-						</div>
+							<!-- MOVIE RATING STARS -->
+							<div class="movie_star position-absolute me-3">
+								<i class="fa-solid fa-star primary_text"></i>
+								<span>0/10</span>
+							</div>
 
-						<!-- MOVIE OVERLAY -->
-						<div class="movie_content_overlay position-absolute w-100 top-0">
-							<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
-							<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
-								<span>2.30.00</span>
+							<!-- MOVIE OVERLAY -->
+							<div class="movie_content_overlay position-absolute w-100 top-0">
+								<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
+								<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
+									<span>2.30.00</span>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-4">
-					<div class="movie_content position-relative">
+					<div class="col-4">
+						<div class="movie_content position-relative">
 
-						<!-- MOVIE BANNER IMAGE -->
-						<img src="./img/4.jpg" alt="Movie Banner">
+							<!-- MOVIE BANNER IMAGE -->
+							<img src="./img/4.jpg" alt="Movie Banner">
 
-						<!-- MOVIE NAME AND CATEGORY -->
-						<div class="movie_image_text p-4 position-absolute my-4">
-							<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-							<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
-							<span class="movie_release_genre">
-								<span class="d-block mt-2
-								">Release: February 12, 2016</span>
-								<span>Genres: Drama, Action Release</span>
-							</span>
-						</div>
+							<!-- MOVIE NAME AND CATEGORY -->
+							<div class="movie_image_text p-4 position-absolute my-4">
+								<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+								<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
+								<span class="movie_release_genre">
+									<span class="d-block mt-2
+									">Release: February 12, 2016</span>
+									<span>Genres: Drama, Action Release</span>
+								</span>
+							</div>
 
-						<!-- MOVIE DETAILS AND VIEWS -->
-						<div class="movie_info position-absolute d-flex justify-content-between w-100">
-							<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-							<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
-						</div>
+							<!-- MOVIE DETAILS AND VIEWS -->
+							<div class="movie_info position-absolute d-flex justify-content-between w-100">
+								<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+								<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
+							</div>
 
-						<!-- MOVIE RATING STARS -->
-						<div class="movie_star position-absolute me-3">
-							<i class="fa-solid fa-star primary_text"></i>
-							<span>0/10</span>
-						</div>
+							<!-- MOVIE RATING STARS -->
+							<div class="movie_star position-absolute me-3">
+								<i class="fa-solid fa-star primary_text"></i>
+								<span>0/10</span>
+							</div>
 
-						<!-- MOVIE OVERLAY -->
-						<div class="movie_content_overlay position-absolute w-100 top-0">
-							<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
-							<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
-								<span>2.30.00</span>
+							<!-- MOVIE OVERLAY -->
+							<div class="movie_content_overlay position-absolute w-100 top-0">
+								<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
+								<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
+									<span>2.30.00</span>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-4">
-					<div class="movie_content position-relative">
+					<div class="col-4">
+						<div class="movie_content position-relative">
 
-						<!-- MOVIE BANNER IMAGE -->
-						<img src="./img/3-1-1.jpg" alt="Movie Banner">
+							<!-- MOVIE BANNER IMAGE -->
+							<img src="./img/3-1-1.jpg" alt="Movie Banner">
 
-						<!-- MOVIE NAME AND CATEGORY -->
-						<div class="movie_image_text p-4 position-absolute my-4">
-							<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-							<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
-							<span class="movie_release_genre">
-								<span class="d-block mt-2
-								">Release: February 12, 2016</span>
-								<span>Genres: Drama, Action Release</span>
-							</span>
-						</div>
+							<!-- MOVIE NAME AND CATEGORY -->
+							<div class="movie_image_text p-4 position-absolute my-4">
+								<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+								<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
+								<span class="movie_release_genre">
+									<span class="d-block mt-2
+									">Release: February 12, 2016</span>
+									<span>Genres: Drama, Action Release</span>
+								</span>
+							</div>
 
-						<!-- MOVIE DETAILS AND VIEWS -->
-						<div class="movie_info position-absolute d-flex justify-content-between w-100">
-							<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-							<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
-						</div>
+							<!-- MOVIE DETAILS AND VIEWS -->
+							<div class="movie_info position-absolute d-flex justify-content-between w-100">
+								<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+								<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
+							</div>
 
-						<!-- MOVIE RATING STARS -->
-						<div class="movie_star position-absolute me-3">
-							<i class="fa-solid fa-star primary_text"></i>
-							<span>0/10</span>
-						</div>
+							<!-- MOVIE RATING STARS -->
+							<div class="movie_star position-absolute me-3">
+								<i class="fa-solid fa-star primary_text"></i>
+								<span>0/10</span>
+							</div>
 
-						<!-- MOVIE OVERLAY -->
-						<div class="movie_content_overlay position-absolute w-100 top-0">
-							<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
-							<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
-								<span>2.30.00</span>
+							<!-- MOVIE OVERLAY -->
+							<div class="movie_content_overlay position-absolute w-100 top-0">
+								<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
+								<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
+									<span>2.30.00</span>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-4">
-					<div class="movie_content position-relative">
+					<div class="col-4">
+						<div class="movie_content position-relative">
 
-						<!-- MOVIE BANNER IMAGE -->
-						<img src="./img/2.jpg" alt="Movie Banner">
+							<!-- MOVIE BANNER IMAGE -->
+							<img src="./img/2.jpg" alt="Movie Banner">
 
-						<!-- MOVIE NAME AND CATEGORY -->
-						<div class="movie_image_text p-4 position-absolute my-4">
-							<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-							<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
-							<span class="movie_release_genre">
-								<span class="d-block mt-2
-								">Release: February 12, 2016</span>
-								<span>Genres: Drama, Action Release</span>
-							</span>
-						</div>
+							<!-- MOVIE NAME AND CATEGORY -->
+							<div class="movie_image_text p-4 position-absolute my-4">
+								<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+								<span class="fw-bold fs-5">Category: <span class="fw-normal">Top Rating</span></span>
+								<span class="movie_release_genre">
+									<span class="d-block mt-2
+									">Release: February 12, 2016</span>
+									<span>Genres: Drama, Action Release</span>
+								</span>
+							</div>
 
-						<!-- MOVIE DETAILS AND VIEWS -->
-						<div class="movie_info position-absolute d-flex justify-content-between w-100">
-							<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-							<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
-						</div>
+							<!-- MOVIE DETAILS AND VIEWS -->
+							<div class="movie_info position-absolute d-flex justify-content-between w-100">
+								<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+								<span class="movie_views py-2 px-3 rounded-end rounded-pill">381 Views</span>
+							</div>
 
-						<!-- MOVIE RATING STARS -->
-						<div class="movie_star position-absolute me-3">
-							<i class="fa-solid fa-star primary_text"></i>
-							<span>0/10</span>
-						</div>
+							<!-- MOVIE RATING STARS -->
+							<div class="movie_star position-absolute me-3">
+								<i class="fa-solid fa-star primary_text"></i>
+								<span>0/10</span>
+							</div>
 
-						<!-- MOVIE OVERLAY -->
-						<div class="movie_content_overlay position-absolute w-100 top-0">
-							<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
-							<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
-								<span>2.30.00</span>
+							<!-- MOVIE OVERLAY -->
+							<div class="movie_content_overlay position-absolute w-100 top-0">
+								<i class="fa-regular fa-circle-play display-1 position-absolute"></i>
+								<div class="movie_duration position-absolute start-0 p-2 rounded-start rounded-pill">
+									<span>2.30.00</span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<!-- SECTION LATEST NEWS -->
-	<section class="latest_news py-5">
-		<div class="container">
-			<div class="section_header d-flex justify-content-between mb-5">
-				<div class="section_texts py-3 ps-4 flex-grow-1">
-					<span class="heading_text d-block fw-bold fs-5">Latest News</span>
-					<span class="heading_paragraph d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-						eius!</span>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-6">
-					<div class="movie_content latest_news_left_side position-relative">
-
-						<!-- MOVIE BANNER IMAGE -->
-						<img class="blog_img" src="./img/blog.jpg" alt="Movie Banner">
-
-						<!-- MOVIE NAME AND CATEGORY -->
-						<div class="movie_image_text p-4 position-absolute my-4">
-							<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-						</div>
-
-						<!-- MOVIE DETAILS AND VIEWS -->
-						<div class="movie_info position-absolute d-flex justify-content-between w-100">
-							<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-							<span class="py-2 px-3">0 comment <span class="ms-3">Share</span></span>
-						</div>
-
-						<!-- BLOG OVERLAY -->
-						<div class="movie_content_overlay position-absolute w-100 top-0">
-							<div class="movie_duration position-absolute end-0 p-2 rounded-end rounded-pill">
-								<span>April 14, 2020</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-6">
-					<div class="row g-4 latest_news_right_side">
-						<div class="col-6">
-							<div class="movie_content position-relative">
-
-								<!-- MOVIE BANNER IMAGE -->
-								<img src="./img/blog2.jpg" alt="Movie Banner">
-
-								<!-- MOVIE NAME AND CATEGORY -->
-								<div class="movie_image_text p-4 position-absolute my-4">
-									<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-								</div>
-
-								<!-- MOVIE DETAILS AND VIEWS -->
-								<div class="movie_info position-absolute d-flex justify-content-between w-100">
-									<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-									<span class="py-2 px-3">Share</span>
-								</div>
-
-								<!-- BLOG OVERLAY -->
-								<div class="movie_content_overlay position-absolute w-100 top-0">
-									<div class="movie_duration position-absolute end-0 p-2 rounded-end rounded-pill">
-										<span>April 14, 2020</span>
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<div class="col-6">
-							<div class="movie_content position-relative">
-
-								<!-- MOVIE BANNER IMAGE -->
-								<img src="./img/blog3.jpg" alt="Movie Banner">
-
-								<!-- MOVIE NAME AND CATEGORY -->
-								<div class="movie_image_text p-4 position-absolute my-4">
-									<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-								</div>
-
-								<!-- MOVIE DETAILS AND VIEWS -->
-								<div class="movie_info position-absolute d-flex justify-content-between w-100">
-									<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-									<span class="py-2 px-3">Share</span>
-								</div>
-
-								<!-- BLOG OVERLAY -->
-								<div class="movie_content_overlay position-absolute w-100 top-0">
-									<div class="movie_duration position-absolute end-0 p-2 rounded-end rounded-pill">
-										<span>April 14, 2020</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-6">
-							<div class="movie_content position-relative">
-
-								<!-- MOVIE BANNER IMAGE -->
-								<img src="./img/blog4-570x570.jpg" alt="Movie Banner">
-
-								<!-- MOVIE NAME AND CATEGORY -->
-								<div class="movie_image_text p-4 position-absolute my-4">
-									<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-								</div>
-
-								<!-- MOVIE DETAILS AND VIEWS -->
-								<div class="movie_info position-absolute d-flex justify-content-between w-100">
-									<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-									<span class="py-2 px-3">Share</span>
-								</div>
-
-								<!-- BLOG OVERLAY -->
-								<div class="movie_content_overlay position-absolute w-100 top-0">
-									<div class="movie_duration position-absolute end-0 p-2 rounded-end rounded-pill">
-										<span>April 14, 2020</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-6">
-							<div class="movie_content position-relative">
-
-								<!-- MOVIE BANNER IMAGE -->
-								<img src="./img/blog5-570x570.jpg" alt="Movie Banner">
-
-								<!-- MOVIE NAME AND CATEGORY -->
-								<div class="movie_image_text p-4 position-absolute my-4">
-									<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
-								</div>
-
-								<!-- MOVIE DETAILS AND VIEWS -->
-								<div class="movie_info position-absolute d-flex justify-content-between w-100">
-									<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
-									<span class="py-2 px-3">Share</span>
-								</div>
-
-								<!-- BLOG OVERLAY -->
-								<div class="movie_content_overlay position-absolute w-100 top-0">
-									<div class="movie_duration position-absolute end-0 p-2 rounded-end rounded-pill">
-										<span>April 14, 2020</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- NEWSLETTER SUBSCRIPTION -->
-	<section class="newsletter py-5">
-		<div class="container">
-			<div class="newsletter_content d-flex align-items-center justify-content-center">
-				<form class="w-75 text-center">
-					<div class="d-flex">
-						<input class="p-4" type="text" name="firstname" id="firstname" placeholder="First Name">
-						<input class="p-4 mx-4" type="text" name="lastname" id="lastname" placeholder="Last Name">
-						<input class="p-4" type="email" name="email" id="email" placeholder="Email Address">
-					</div>
-
-					<input class="px-5 mt-3 btn btn_subscribe" type="submit" value="Subscribe">
-				</form>
-			</div>
-		</div>
-	</section>
-
-	<!-- FOOTER -->
-	<footer>
-		<div class="upper_footer p-5">
+		<!-- SECTION LATEST NEWS -->
+		<section class="latest_news py-5">
 			<div class="container">
-				<div class="row row-cols-4 my-4">
-					<div class="col">
-						<h4>About Us</h4>
-						<hr class="my-0">
-						<p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex beatae suscipit, impedit
-							consectetur nihil
-							minima ratione a nulla cumque inventore qui deserunt odio et ut dolore! Necessitatibus</p>
-						<div class="socials">
-							<a href="#">
-								<i class="rounded-circle fa-brands fa-facebook-f"></i>
-							</a>
-							<a href="#">
-								<i class="rounded-circle ms-2 fa-brands fa-twitter"></i>
-							</a>
-							<a href="#">
-								<i class="rounded-circle ms-2 fa-brands fa-linkedin-in"></i>
-							</a>
-							<a href="#">
-								<i class="rounded-circle ms-2 fa-brands fa-instagram"></i>
-							</a>
-							<a href="#">
-								<i class="rounded-circle ms-2 fa-brands fa-pinterest"></i>
-							</a>
-						</div>
+				<div class="section_header d-flex justify-content-between mb-5">
+					<div class="section_texts py-3 ps-4 flex-grow-1">
+						<span class="heading_text d-block fw-bold fs-5">Latest News</span>
+						<span class="heading_paragraph d-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+							eius!</span>
 					</div>
-					<div class="col">
-						<h4>Movie Category</h4>
-						<hr class="my-0">
-						<ul class="list-group">
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col">
-						<h4>Information</h4>
-						<hr class="my-0">
-						<ul class="list-group">
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-							<li class="mt-4">
-								<a href="#">Lorem, ipsum dolor.</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col">
-						<h4>Recent Posts</h4>
-						<hr class="my-0">
-						<div class="post_card d-flex align-items-center mt-4">
-							<div class="post_card_image flex-shrink-0">
-								<img src="./img/blog.jpg" alt="Post Image">
-							</div>
-							<div class="post_card_details ms-2">
-								<span class="fw-bold">Actor The Concept Movie High Concept Theory See</span>
-								<span>April 14, 2020</span>
-							</div>
-						</div>
-						<div class="post_card d-flex align-items-center mt-4">
-							<div class="post_card_image flex-shrink-0">
-								<img src="./img/blog2.jpg" alt="Post Image">
-							</div>
-							<div class="post_card_details ms-2">
-								<span class="fw-bold">Actor The Concept Movie High Concept Theory See</span>
-								<span>April 14, 2020</span>
-							</div>
-						</div>
-						<div class="post_card d-flex align-items-center mt-4">
-							<div class="post_card_image flex-shrink-0">
-								<img src="./img/blog3.jpg" alt="Post Image">
-							</div>
-							<div class="post_card_details ms-2">
-								<span class="fw-bold">Actor The Concept Movie High Concept Theory See</span>
-								<span>April 14, 2020</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bottom_footer py-4">
-			<div class="container d-flex justify-content-between">
-				<div class="site_terms">
-					<span>Terms and Conditions</span>
-					<span class="ms-4">Policy</span>
-					<span class="ms-4">About</span>
 				</div>
 
-				<div class="site_rights">
-					<span>&copy; 2020 <a href="#" class="primary_text">@Boolean </a>All Rights Reserved.</span>
+				<div class="row">
+					<div class="col-6">
+						<div class="movie_content latest_news_left_side position-relative">
+
+							<!-- MOVIE BANNER IMAGE -->
+							<img class="blog_img" src="./img/blog.jpg" alt="Movie Banner">
+
+							<!-- MOVIE NAME AND CATEGORY -->
+							<div class="movie_image_text p-4 position-absolute my-4">
+								<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+							</div>
+
+							<!-- MOVIE DETAILS AND VIEWS -->
+							<div class="movie_info position-absolute d-flex justify-content-between w-100">
+								<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+								<span class="py-2 px-3">0 comment <span class="ms-3">Share</span></span>
+							</div>
+
+							<!-- BLOG OVERLAY -->
+							<div class="movie_content_overlay position-absolute w-100 top-0">
+								<div class="movie_duration position-absolute end-0 p-2 rounded-end rounded-pill">
+									<span>April 14, 2020</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="row g-4 latest_news_right_side">
+							<div class="col-6">
+								<div class="movie_content position-relative">
+
+									<!-- MOVIE BANNER IMAGE -->
+									<img src="./img/blog2.jpg" alt="Movie Banner">
+
+									<!-- MOVIE NAME AND CATEGORY -->
+									<div class="movie_image_text p-4 position-absolute my-4">
+										<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+									</div>
+
+									<!-- MOVIE DETAILS AND VIEWS -->
+									<div class="movie_info position-absolute d-flex justify-content-between w-100">
+										<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+										<span class="py-2 px-3">Share</span>
+									</div>
+
+									<!-- BLOG OVERLAY -->
+									<div class="movie_content_overlay position-absolute w-100 top-0">
+										<div class="movie_duration position-absolute end-0 p-2 rounded-end rounded-pill">
+											<span>April 14, 2020</span>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="movie_content position-relative">
+
+									<!-- MOVIE BANNER IMAGE -->
+									<img src="./img/blog3.jpg" alt="Movie Banner">
+
+									<!-- MOVIE NAME AND CATEGORY -->
+									<div class="movie_image_text p-4 position-absolute my-4">
+										<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+									</div>
+
+									<!-- MOVIE DETAILS AND VIEWS -->
+									<div class="movie_info position-absolute d-flex justify-content-between w-100">
+										<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+										<span class="py-2 px-3">Share</span>
+									</div>
+
+									<!-- BLOG OVERLAY -->
+									<div class="movie_content_overlay position-absolute w-100 top-0">
+										<div class="movie_duration position-absolute end-0 p-2 rounded-end rounded-pill">
+											<span>April 14, 2020</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="movie_content position-relative">
+
+									<!-- MOVIE BANNER IMAGE -->
+									<img src="./img/blog4-570x570.jpg" alt="Movie Banner">
+
+									<!-- MOVIE NAME AND CATEGORY -->
+									<div class="movie_image_text p-4 position-absolute my-4">
+										<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+									</div>
+
+									<!-- MOVIE DETAILS AND VIEWS -->
+									<div class="movie_info position-absolute d-flex justify-content-between w-100">
+										<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+										<span class="py-2 px-3">Share</span>
+									</div>
+
+									<!-- BLOG OVERLAY -->
+									<div class="movie_content_overlay position-absolute w-100 top-0">
+										<div class="movie_duration position-absolute end-0 p-2 rounded-end rounded-pill">
+											<span>April 14, 2020</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="movie_content position-relative">
+
+									<!-- MOVIE BANNER IMAGE -->
+									<img src="./img/blog5-570x570.jpg" alt="Movie Banner">
+
+									<!-- MOVIE NAME AND CATEGORY -->
+									<div class="movie_image_text p-4 position-absolute my-4">
+										<span class="fw-bold fs-5 d-block mb-2">Hurry Animate Blue Strack New Movie</span>
+									</div>
+
+									<!-- MOVIE DETAILS AND VIEWS -->
+									<div class="movie_info position-absolute d-flex justify-content-between w-100">
+										<span class="movie_details py-2 px-3 rounded-start rounded-pill">Details</span>
+										<span class="py-2 px-3">Share</span>
+									</div>
+
+									<!-- BLOG OVERLAY -->
+									<div class="movie_content_overlay position-absolute w-100 top-0">
+										<div class="movie_duration position-absolute end-0 p-2 rounded-end rounded-pill">
+											<span>April 14, 2020</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+		</section>
+
+		<!-- NEWSLETTER SUBSCRIPTION -->
+		<section class="newsletter py-5">
+			<div class="container">
+				<div class="newsletter_content d-flex align-items-center justify-content-center">
+					<form class="w-75 text-center">
+						<div class="d-flex">
+							<input class="p-4" type="text" name="firstname" id="firstname" placeholder="First Name">
+							<input class="p-4 mx-4" type="text" name="lastname" id="lastname" placeholder="Last Name">
+							<input class="p-4" type="email" name="email" id="email" placeholder="Email Address">
+						</div>
+
+						<input class="px-5 mt-3 btn btn_subscribe" type="submit" value="Subscribe">
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="upper_footer p-5">
+				<div class="container">
+					<div class="row row-cols-4 my-4">
+						<div class="col">
+							<h4>About Us</h4>
+							<hr class="my-0">
+							<p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex beatae suscipit, impedit
+								consectetur nihil
+								minima ratione a nulla cumque inventore qui deserunt odio et ut dolore! Necessitatibus</p>
+							<div class="socials">
+								<a href="#">
+									<i class="rounded-circle fa-brands fa-facebook-f"></i>
+								</a>
+								<a href="#">
+									<i class="rounded-circle ms-2 fa-brands fa-twitter"></i>
+								</a>
+								<a href="#">
+									<i class="rounded-circle ms-2 fa-brands fa-linkedin-in"></i>
+								</a>
+								<a href="#">
+									<i class="rounded-circle ms-2 fa-brands fa-instagram"></i>
+								</a>
+								<a href="#">
+									<i class="rounded-circle ms-2 fa-brands fa-pinterest"></i>
+								</a>
+							</div>
+						</div>
+						<div class="col">
+							<h4>Movie Category</h4>
+							<hr class="my-0">
+							<ul class="list-group">
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col">
+							<h4>Information</h4>
+							<hr class="my-0">
+							<ul class="list-group">
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+								<li class="mt-4">
+									<a href="#">Lorem, ipsum dolor.</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col">
+							<h4>Recent Posts</h4>
+							<hr class="my-0">
+							<div class="post_card d-flex align-items-center mt-4">
+								<div class="post_card_image flex-shrink-0">
+									<img src="./img/blog.jpg" alt="Post Image">
+								</div>
+								<div class="post_card_details ms-2">
+									<span class="fw-bold">Actor The Concept Movie High Concept Theory See</span>
+									<span>April 14, 2020</span>
+								</div>
+							</div>
+							<div class="post_card d-flex align-items-center mt-4">
+								<div class="post_card_image flex-shrink-0">
+									<img src="./img/blog2.jpg" alt="Post Image">
+								</div>
+								<div class="post_card_details ms-2">
+									<span class="fw-bold">Actor The Concept Movie High Concept Theory See</span>
+									<span>April 14, 2020</span>
+								</div>
+							</div>
+							<div class="post_card d-flex align-items-center mt-4">
+								<div class="post_card_image flex-shrink-0">
+									<img src="./img/blog3.jpg" alt="Post Image">
+								</div>
+								<div class="post_card_details ms-2">
+									<span class="fw-bold">Actor The Concept Movie High Concept Theory See</span>
+									<span>April 14, 2020</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_footer py-4">
+				<div class="container d-flex justify-content-between">
+					<div class="site_terms">
+						<span>Terms and Conditions</span>
+						<span class="ms-4">Policy</span>
+						<span class="ms-4">About</span>
+					</div>
+
+					<div class="site_rights">
+						<span>&copy; 2020 <a href="#" class="primary_text">@Boolean </a>All Rights Reserved.</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
 </body>
 
 </html>
